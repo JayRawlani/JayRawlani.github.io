@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <head lang="en">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title> My First Page</title>
+	<title> Jai Provision </title>
 	<link rel="icon" type="image/png" href=".\images\j.png" />
+	<link rel="stylesheet" href="./css./style.css">
 </head>
 <BODY>
 	<main>
-		<p>
-			Hey there! I'm <strong>Jay Rawlani</strong>, a engineering college student pursing a degree in Information technology. I'm currently in 2nd year, trying to learn something new. So started with HTML.
+		<header>
+			<div class="container">
+				<div id="name">
+					<h1>Jai Provision</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html">About</a></li>
+						<li><a href="index.html">Groceries list</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section id="showcase">
+			<div class="container">
+				<h1>Namaskar</h1>
+				<p>
+					We provide good quality products with different varieties at reasonable price.
+					We urge to provide excellent services to each coustmer.
+					In short our shop is a perfect solution/place to all your daily needs.
+				</p>
+			</div>
+		</section>
 
-			<br>
-			<figure>
-				<img src=".\images\dp.jpg" alt="My Pic">
-				<figcaption> My Pic </figcaption>
-			</figure>
-			<br>
-
-				To get connected to me, click on the following buttons
-				<br>
-				<button onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
-				<br>
-				<button onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
-				<br>
-				<button onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
-				<br>
-				<a href="mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out">Email me</a>
-		</p>
+		<section id="family">
+			<div class="container">
+				<h1>Want to be a part of our Family?</h1>
+				<form>
+					<fieldset>
+						<LEGEND>Adding Info</LEGEND>
+						<label>
+						Username
+						<input type="text" name="Username" placeholder="Enter your full name here...." required>
+						</label>
+						<br>
+						<label>
+							Email
+							<input type="email" name="email" placeholder="Enter your email...." required>
+						</label>
+						<br>
+						<label>
+							Mobile Number
+							<input type="tel" name="Mobile Number" placeholder="Enter your mobile number..." required>
+						</label>
+						<br>
+						<label>
+							Address
+							<input type="Address" name="Address" placeholder="Enter your Address..." required>
+						</label>
+						<br>
+						<button type="submit" class="button_1">Add me</button>
+					</fieldset>
+					
+				</form>
+			</div>
+		</section>
 	</main>
 	<hr>
 	<footer>
-			<small>&copy; My page</small>
+			<small>&copy; Jai Provision official</small>
 	</footer>
 </BODY>
 </html>
