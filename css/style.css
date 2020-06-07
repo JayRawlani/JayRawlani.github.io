@@ -73,10 +73,20 @@ header .highlight {
 	font-weight: bold;
 }
 
+header .highlight:hover{
+	color: #00ff00;
+	font-weight: bold;
+}
+
 
 /*colouring Provision*/
 header .highligt {
 	color: #00ff00;
+	font-weight: bold;
+}
+
+header .highligt:hover{
+	color: #e8491d;
 	font-weight: bold;
 }
 
