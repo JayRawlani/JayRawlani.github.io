@@ -20,6 +20,15 @@ ul{
 	padding:0;
 }
 
+.button_1{
+	height: 38px;
+	background: #e8491d;
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff;
+}
+
 /*header*/
 header{
 	background: #788889;
@@ -57,27 +66,109 @@ header nav{
 	margin-top: 10px;
 }
 
+
 /*colouring Jai*/
 header .highlight {
-	color: #ffffe0;
+	color: #e8491d;
 	font-weight: bold;
 }
+
 
 /*colouring Provision*/
 header .highligt {
-	color: #ffffe0;
+	color: #00ff00;
 	font-weight: bold;
 }
 
+
+/*colouring and hovering Navigation keys*/
 header .current a{
 	color: #00ffff;
 	font-weight: bold;
 }
 
-header a.hover{
-	color: #cccccc;
+header a:hover{
+	color: #dda0dd;
 	font-weight: bold;
 }
 
 
 /*Showcase*/
+#showcase{
+	min-height: 400px;
+	background: url('../images/showcase.jpeg') no-repeat 400px 0;
+	text-align: center;
+}
+
+#showcase h1{
+	margin-top: 50px;
+	font-size: 35px;
+	margin-bottom: 20px;
+	color: #ffff00;
+	font-weight: bold;
+}
+
+#showcase p{
+	font-size: 20px;
+	margin-top: 240px;
+	color: #000000;
+}
+
+/* Family */
+#family{
+	padding: 15px;
+	color: #ffffff;
+	background:#5f9ea0;
+}
+
+#family h1{
+	float: left;
+}
+
+#family input[type="text"]{
+	padding: 4px;
+	height: 25px;
+	width: 200px;
+}
+
+#family input[type="email"]{
+	padding: 4px;
+	height: 25px;
+	width: 200px;
+}
+
+#family input[type="tel"]{
+	padding: 4px;
+	height: 25px;
+	width: 200px;
+}
+
+#family input[type="Address"]{
+	padding: 4px;
+	height: 25px;
+	width: 200px;
+}
+
+/* last */
+#last{
+	margin-top: 20px;
+}
+
+#last .l{
+	float: ;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
+#last .l img{
+	width: 90px;
+}
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+	background-color: #e8491d;
+	text-align: center;
+}
