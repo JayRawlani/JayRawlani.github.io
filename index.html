@@ -4,6 +4,39 @@
 	<title> Jai Provision </title>
 	<link rel="icon" type="image/png" href=".\images\grocery logo.png" />
 	<link rel="stylesheet" href=".\css\style.css">
+
+	<script type="text/javascript">
+		function addtext()
+		{
+			document.getElementById("para").innerHTML = "Thanks for adding yout info! We hope you'll get better experience through this website.";
+		}
+
+		function checkfield()
+		{
+			var f1 = document.getElementById("i1").value;
+			var f3 = document.getElementById("i3").value;
+			var f4 = document.getElementById("i4").value;
+
+			if (f1 ==0)
+				document.getElementById("message1").innerHTML = "Please put a valid name";
+
+			if (f1.length <2)
+				document.getElementById("message1").innerHTML = "This name is not acceptable";
+
+			if (f3==0) 
+				document.getElementById("message3").innerHTML = "Please put a valid number";
+
+			if (3.length <10)
+				document.getElementById("message3").innerHTML = "This number is not acceptable";
+
+			if (f4==0)
+				document.getElementById("message4").innerHTML = "Please put a valid Address";
+
+			if (f4.length <2)
+				document.getElementById("message4").innerHTML = "This Address is not acceptable";
+		}
+
+	</script>
 </head>
 <BODY>
 		<!-- Head -->
@@ -21,6 +54,14 @@
 				</nav>
 			</div>
 		</header>
+		<br>
+		<aside>
+			<button type="button" class="button_2" onclick="document.getElementById('Demo').innerHTML = Date()">
+				Today's Date
+			</button>
+			<p id="Demo"></p>
+		</aside>
+		<br>
 		<section id="showcase">
 			<div class="container">
 				<h1>READY TO SHOP GROCERIES?</h1>
@@ -43,37 +84,38 @@
 						<LEGEND>Add your Info here</LEGEND>
 						<label>
 						Username
-						<input type="text" name="Username" placeholder="ex. Jay Rawlani" required>
+						<input id="i1" type="text" placeholder="ex. Jay Rawlani" onblur="checkfield();"><span id="message1"></span>
 						</label>
 						<br>
 						<label>
 							Email
-							<input type="email" name="email" placeholder="ex. abc@gmail.com" required>
+							<input id="i2" type="email" name="email" placeholder="ex. abc@gmail.com">
 						</label>
 						<br>
 						<label>
 							Mobile Number
-							<input type="tel" name="Mobile Number" placeholder="ex. 8976543331" required>
+							<input id="i3" type="tel" name="Mobile Number" placeholder="ex. 8976543331" onblur="checkfield();"><span id="message3"></span>
 						</label>
 						<br>
 						<label>
 							Address
-							<input type="Address" name="Address" placeholder="ex. Saraswati nagar, near SBI bank" required>
+							<input id="i4" type="Address" name="Address" placeholder="ex. Saraswati nagar, near SBI bank" onblur="checkfield();"><span id="message4"></span>
 						</label>
 						<br>
-						<button type="submit" class="button_1">Add me</button>
+						<button type="submit" onclick="addtext();" class="button_1">Add me</button>
+						<p id="para"> </p>
 					</fieldset>	
 				</form>
 			</div>
 		</section>
 
-		<section id="last">
+		<section id="connect">
 			<div class="container">
-				<div class="l">
+				<article id="socialmedia">
 					<h3>Reach Us On</h3>
 					<img src=".\images\contact logo.jpg" width="15%">
 					<br>
-					<p>You can connect to us by email/ Social Media/ Phone number</p>
+					<p>You can connect to us by email/ Social Media</p>
 					<button onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
 					<br>
 					<button onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
@@ -81,16 +123,22 @@
 					<button onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
 					<br>
 					<a href="mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out">Email me</a>
-				</div>
-				<div class="l">
+				</article>
+					
+			</div>
+
+			<aside id="sidebar">
+				<div class="s1">
 					<h3>Shop Adress</h3>
 					<img src=".\images\address logo.jpeg"w width="15%">
 					<p>Jai Provision, Sai Nagar,
 					<br> Near bus stand, 
 					<br> Arvi - 442201</p>
 				</div>
-			</div>
+			</aside>
 		</section>
+		<br>
+		<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="12" width="100%"> Call us on 8975919061 </marquee>
 	<footer>
 			<small>&copy; Copyright Jai Provision official since 1990s</small>
 	</footer>

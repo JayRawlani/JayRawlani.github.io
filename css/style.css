@@ -29,6 +29,15 @@ ul{
 	color: #ffffff;
 }
 
+.button_2{
+	height: 38px;
+	background: #fa8072;
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff;
+}
+
 /*header*/
 header{
 	background: #788889;
@@ -105,7 +114,7 @@ header a:hover{
 
 /*Showcase*/
 #showcase{
-	min-height: 400px;
+	min-height: 420px;
 	background: url('../images/showcase.jpeg') no-repeat 400px 0;
 	text-align: center;
 }
@@ -175,6 +184,18 @@ header a:hover{
 	width: 90px;
 }
 
+/*sidebr*/
+aside#sidebar{
+	float: right;
+	width: 50%;
+	margin-top: 10px;
+}
+
+/*social media*/
+article#socialmedia{
+	float: left;
+	width: 50%
+}
 footer{
 	padding: 20px;
 	margin-top: 20px;
