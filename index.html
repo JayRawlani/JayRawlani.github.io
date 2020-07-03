@@ -4,39 +4,6 @@
 	<title> Jai Provision </title>
 	<link rel="icon" type="image/png" href=".\images\grocery logo.png" />
 	<link rel="stylesheet" href=".\css\style.css">
-
-	<script type="text/javascript">
-		function addtext()
-		{
-			document.getElementById("para").innerHTML = "Thanks for adding yout info! We hope you'll get better experience through this website.";
-		}
-
-		function checkfield()
-		{
-			var f1 = document.getElementById("i1").value;
-			var f3 = document.getElementById("i3").value;
-			var f4 = document.getElementById("i4").value;
-
-			if (f1 ==0)
-				document.getElementById("message1").innerHTML = "Please put a valid name";
-
-			if (f1.length <2)
-				document.getElementById("message1").innerHTML = "This name is not acceptable";
-
-			if (f3==0) 
-				document.getElementById("message3").innerHTML = "Please put a valid number";
-
-			if (3.length <10)
-				document.getElementById("message3").innerHTML = "This number is not acceptable";
-
-			if (f4==0)
-				document.getElementById("message4").innerHTML = "Please put a valid Address";
-
-			if (f4.length <2)
-				document.getElementById("message4").innerHTML = "This Address is not acceptable";
-		}
-
-	</script>
 </head>
 <BODY>
 		<!-- Head -->
@@ -50,16 +17,17 @@
 						<li class="current"><a href="index.html">Home</a></li>
 						<li class="current"><a href="index.html">About</a></li>
 						<li class="current"><a href="Groceries list.html">Groceries list</a></li>
+						<button type="button" class="button_2" onclick="document.getElementById('Demo').innerHTML = Date()">
+							Today's Date
+						</button>
+						<p id="Demo"></p>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<br>
 		<aside>
-			<button type="button" class="button_2" onclick="document.getElementById('Demo').innerHTML = Date()">
-				Today's Date
-			</button>
-			<p id="Demo"></p>
+			
 		</aside>
 		<br>
 		<section id="showcase">
@@ -75,32 +43,39 @@
 			</div>
 		</section>
 
-		<!-- Adding members -->
+		<!-- Adding members/ form -->
 		<section id="family">
 			<div class="container">
 				<h1>Want to be a part of our Family?</h1>
 				<form>
 					<fieldset>
 						<LEGEND>Add your Info here</LEGEND>
-						<label>
-						Username
-						<input id="i1" type="text" placeholder="ex. Jay Rawlani" onblur="checkfield();"><span id="message1"></span>
-						</label>
-						<br>
-						<label>
-							Email
-							<input id="i2" type="email" name="email" placeholder="ex. abc@gmail.com">
-						</label>
-						<br>
-						<label>
-							Mobile Number
-							<input id="i3" type="tel" name="Mobile Number" placeholder="ex. 8976543331" onblur="checkfield();"><span id="message3"></span>
-						</label>
-						<br>
-						<label>
-							Address
-							<input id="i4" type="Address" name="Address" placeholder="ex. Saraswati nagar, near SBI bank" onblur="checkfield();"><span id="message4"></span>
-						</label>
+						<table>
+							<td>
+								<label>
+								Username
+								<input id="i1" type="text" placeholder="ex. Jay Rawlani">
+								</label>
+							</td>
+							<td>
+								<label>
+								Email
+								<input id="i2" type="email" name="email" placeholder="ex. abc@gmail.com">
+								</label>
+							</td>
+							<td>
+								<label>
+								Mobile Number
+								<input id="i3" type="tel" name="Mobile Number" placeholder="ex. 8976543331">
+								</label>
+							</td>
+							<td>
+								<label>
+								Address
+								<input id="i4" type="Address" name="Address" placeholder="ex. Saraswati nagar, near SBI bank" >
+								</label>
+							</td>
+						</table>
 						<br>
 						<button type="submit" onclick="addtext();" class="button_1">Add me</button>
 						<p id="para"> </p>

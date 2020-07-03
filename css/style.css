@@ -4,9 +4,9 @@ body{
 	line-height: 1.5;
 	padding: 0;
 	margin: 1.5px;
-	background-color: #f4f4f4
+	background-color: #f4f4f4;
+	font-family:Arial, Helvetica, sans-serif;
 }
-
 
 /*Global*/
 .container{
@@ -30,12 +30,12 @@ ul{
 }
 
 .button_2{
-	height: 38px;
+	height: 25px;
 	background: #fa8072;
-	border: 0;
+	border: 3px;
 	padding-left: 20px;
 	padding-right: 20px;
-	color: #ffffff;
+	color: #4B0082;
 }
 
 /*header*/
@@ -111,33 +111,56 @@ header a:hover{
 	font-weight: bold;
 }
 
-
-/*Showcase*/
-#showcase{
-	min-height: 420px;
-	background: url('../images/showcase.jpeg') no-repeat 400px 0;
-	text-align: center;
-}
-
-#showcase h1{
-	margin-top: 50px;
-	font-size: 35px;
-	margin-bottom: 20px;
-	color: #ffff00;
+header .button_2:hover{
+	color: #E0FFFF;
 	font-weight: bold;
 }
 
+
+/*Showcase*/
+#showcase{
+	height: 250px;
+	width: 75%;
+	padding: 30px;
+	margin-bottom: 40px;
+	background: url('showcase.jpeg');
+	background-color: #cccccc; 
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: right;
+	text-align: center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#showcase h1{
+	margin-top: 10px;
+	font-size: 25px;
+	margin-bottom: 20px;
+	color: #ffff00;
+	display: inline-block;
+	font-weight: bold;
+	background-color: #EE82EE;
+	background-size: 30px;
+}
+
 #showcase p{
-	font-size: 20px;
-	margin-top: 240px;
-	color: #000000;
+	position: relative;
+	margin-top: 100px;
+	color: #ffffff;
+	font-size: 18px;
+	background-color: #000000;
+	display: inline-block;
+    margin-bottom: 5px;
+    padding-left: 5px;
 }
 
 /* Family */
 #family{
-	padding: 15px;
+	padding: 22px;
+	margin-top: 40px;
 	color: #ffffff;
 	background:#5f9ea0;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 #family h1{
@@ -168,24 +191,9 @@ header a:hover{
 	width: 200px;
 }
 
-/* last */
-#last{
-	margin-top: 20px;
-}
-
-#last .l{
-	float: ;
-	text-align: center;
-	width: 30%;
-	padding: 10px;
-}
-
-#last .l img{
-	width: 90px;
-}
-
 /*sidebr*/
 aside#sidebar{
+	margin-top: 20px;
 	float: right;
 	width: 50%;
 	margin-top: 10px;
@@ -203,3 +211,25 @@ footer{
 	background-color: #e8491d;
 	text-align: center;
 }
+
+#connect img{
+	width: 120px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/* 
+#last{
+	margin-top: 20px;
+}
+
+#last .l{
+	float: ;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
+#last .l img{
+	width: 90px;
+}
+*/
