@@ -1,10 +1,400 @@
 </!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title> Jai Provision </title>
+	<link rel="icon" type="image/png" href=".\images\grocery logo.png" />
+	<link rel="stylesheet" href=".\css\style.css">
 </head>
 
 <body>
-<a href="index.html">my page</a>
+	<!-- Head -->
+		<header>
+			<div class="container">
+				<div id="name">
+					<h1><span class="highlight">Jai</span> <span class="highligt">Provision</span></h1>
+				</div>
+				<nav>
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li class="current"><a href="Groceries list.html">Groceries list</a></li>
+						<li class="current"><a href="About.html">About</a></li>
+						<button type="button" class="button_2" onclick="document.getElementById('Demo').innerHTML = Date()">
+							Today's Date
+						</button>
+						<p id="Demo"></p>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!--oils-->
+		<details>
+			<summary id="s1">Click here for Eatable oils</summary>
+			<div style="overflow-x:auto;">
+			<table align="center" id="t1">
+				<caption>
+					Eatable oils
+				</caption>
+				<tr>
+					<th> Name </th>
+					<th> Quantity </th>
+					<th> Price </th>
+				</tr>
+				<tr>
+					<td rowspan="3">Soyabean Oil</td>
+					<td>0.5 lt</td>
+					<td>50 rs</td>
+				</tr>
+				<tr>
+					<td>1 lt</td>
+					<td>95 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>510 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Groundnut Oil</td>
+					<td>0.5 lt</td>
+					<td>80 rs</td>
+				</tr>
+				<tr>
+					<td>1 lt</td>
+					<td>150 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>780 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Ricebran Oil</td>
+					<td>1 lt</td>
+					<td>110 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>580 rs</td>
+				</tr>
+				<tr>
+					<td>15 lt</td>
+					<td>1620 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Sunflower Oil</td>
+					<td>1 lt</td>
+					<td>115 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>600 rs</td>
+				</tr>
+				<tr>
+					<td>15 lt</td>
+					<td>1680 rs</td>
+				</tr>
+			</table>
+		</div>
+		</details>
+
+		<!--dals and others-->
+		<details>
+			<summary id="s2">Click here for Dals and others</summary>
+			<div style="overflow-x:auto;">
+			<table align="center" id="t2">
+				<caption>
+					Dals and others
+				</caption>
+				<tr>
+					<th> Name </th>
+					<th> Quantity </th>
+					<th> Price </th>
+				</tr>
+				<tr>
+					<td rowspan="3">Toor dal</td>
+					<td>1 kg</td>
+					<td>90 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>265 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>440 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Chana dal</td>
+					<td>1 kg</td>
+					<td>60 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>174 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>285 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Moong dal</td>
+					<td>o.5 kg</td>
+					<td>55 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>110 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>325 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Urad dal</td>
+					<td>0.5 kg</td>
+					<td>55 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>110 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>325 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Sugar</td>
+					<td>1 kg</td>
+					<td>38 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>190 rs</td>
+				</tr>
+				<tr>
+					<td>10 kg</td>
+					<td>376 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Grondnut</td>
+					<td>1 kg</td>
+					<td>120 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>590 rs</td>
+				</tr>
+				<tr>
+					<td>10 kg</td>
+					<td>1180 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Rava</td>
+					<td>0.5 kg</td>
+					<td>20 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>40 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>190 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Maida</td>
+					<td>0.5 kg</td>
+					<td>20 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>40 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>190 rs</td>
+				</tr>
+			</table>
+		</div>
+		</details>
+
+		<!--rice-->
+		<details>
+			<summary id="s3">Click here for Rice</summary>
+			<div style="overflow-x:auto;">
+			<table align="center" id="t3">
+				<caption>
+					Rice
+				</caption>
+				<tr>
+					<th> Name </th>
+					<th> Quantity </th>
+					<th> Price </th>
+				</tr>
+				<tr>
+					<td rowspan="3">Basmati</td>
+					<td>1 kg</td>
+					<td>90 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>265 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>440 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Kaali mooch</td>
+					<td>1 kg</td>
+					<td>48 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>240 rs</td>
+				</tr>
+				<tr>
+					<td>30 kg</td>
+					<td>1425 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Kolam</td>
+					<td>1 kg</td>
+					<td>45 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>225 rs</td>
+				</tr>
+				<tr>
+					<td>30 kg</td>
+					<td>1350 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">HMT</td>
+					<td>1 kg</td>
+					<td>40 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>200 rs</td>
+				</tr>
+				<tr>
+					<td>30 kg</td>
+					<td>1200 rs</td>
+				</tr>
+			</table>
+		</div>
+		</details>
+
+		<br>
+		<section id="connect">
+			<div class="container">
+				<article id="socialmedia">
+					<h3>Reach Us On</h3>
+					<img src=".\images\contact logo.jpg" width="15%">
+					<br>
+					<table id="t4">
+						<tr><th colspan="2">Email/ Social Media</th></tr>
+						<tr>
+							<td>
+								<button class="button_3" onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
+							</td>
+							<td>
+								<button class="button_3" onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="button_3" onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
+							</td>
+							<td>
+								<button class="button_3" onclick="window.location.href = 'mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out';">Email me</button>
+							</td>
+						</tr>
+					</table>
+				</article>
+					
+			</div>
+
+			<aside id="sidebar">
+				<div class="s1">
+					<h3>Shop Adress</h3>
+					<img src=".\images\address logo.jpeg"w width="15%">
+					<p>Jai Provision, Sai Nagar,
+					<br> Near bus stand, 
+					<br> Arvi - 442201</p>
+				</div>
+			</aside>
+		</section>
+		<br>
+		<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="12" width="100%">For further details call us on 8975919061 </marquee>
+	<footer>
+			<small>&copy; Copyright Jai Provision official since 1990s</small>
+	</footer>
 </body>
 </html>

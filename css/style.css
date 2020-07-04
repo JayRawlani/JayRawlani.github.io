@@ -1,5 +1,5 @@
 body{
-	font-family: Arial, Helvetics, sans-serif;
+	font-family: sans-serif, Arial, Helvetics;
 	font-size: 15px;
 	line-height: 1.5;
 	padding: 0;
@@ -37,6 +37,16 @@ ul{
 	color: #4B0082;
 }
 
+.button_3{
+	height: 33px;
+	background: #98FB98;
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #000000;
+	font-size: 18px;
+}
+
 /*header*/
 header{
 	background: #788889;
@@ -44,6 +54,8 @@ header{
 	padding-top: 30px;
 	min-height: 70px;
 	border-bottom: #ffff00 3px solid; 
+	position: sticky;
+	top:0;
 }
 
 
@@ -118,17 +130,17 @@ header .button_2:hover{
 
 /*Showcase*/
 #showcase{
-	height: 250px;
+	height: 550px;
 	width: 100%;
 	padding: 30px;
 	margin-bottom: 40px;
-	background: url('showcase.jpeg');
+	background: url('front inside.jpeg');
 	background-color: #cccccc; 
   	background-repeat: no-repeat;
   	background-size: cover;
   	background-position: right;
 	text-align: center;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: sans-serif, Arial, Helvetica;
 }
 
 #showcase h1{
@@ -143,8 +155,7 @@ header .button_2:hover{
 }
 
 #showcase p{
-	position: relative;
-	margin-top: 100px;
+	margin-top: 400px;
 	color: #ffffff;
 	font-size: 18px;
 	background-color: #000000;
@@ -159,11 +170,12 @@ header .button_2:hover{
 	margin-top: 40px;
 	color: #ffffff;
 	background:#5f9ea0;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: sans-serif, Arial, Helvetica;
 }
 
 #family h1{
 	float: left;
+	padding-right: 20px;
 }
 
 #family input[type="text"]{
@@ -203,6 +215,25 @@ article#socialmedia{
 	float: left;
 	width: 50%
 }
+
+#t4{
+	border: none;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+	width: 20%;
+}
+
+#t4 th {
+  background-color: #FA8072;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+
+#t4 td{
+	border: none;
+}
+
 footer{
 	padding: 20px;
 	margin-top: 20px;
@@ -213,22 +244,87 @@ footer{
 
 #connect img{
 	width: 120px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: sans-serif, Arial, Helvetica;
 }
 
-/* 
-#last{
+#connect{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#t1, #t2, #t3{
+	border: 2px solid black;
+	width: 55%;
+	margin-bottom: 20px;
 	margin-top: 20px;
+	border-collapse: collapse;
 }
 
-#last .l{
-	float: ;
-	text-align: center;
-	width: 30%;
-	padding: 10px;
+caption{
+	font-size: 38px;
+	color: #CD5C5C;
+	background-color: #B0C4DE;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
-#last .l img{
-	width: 90px;
+#s1{
+	margin-top: 10px;
+	margin-bottom: 5px;
+  	padding: 4px;
+  	width: 300px;
+  	background-color: #eeeeee;
+  	border: 1.5px;
+  	box-shadow: 1px 1px 2px #bbbbbb;
+  	cursor: pointer;
 }
-*/
+
+#s2{
+	margin-top: 10px;
+	margin-bottom: 5px;
+  	padding: 4px;
+  	width: 300px;
+  	background-color: #eeeeee;
+  	border: 1.5px;
+  	box-shadow: 1px 1px 2px #bbbbbb;
+  	cursor: pointer;
+}
+
+#s3{
+	margin-top: 10px;
+	margin-bottom: 5px;
+  	padding: 4px;
+  	width: 300px;
+  	background-color: #eeeeee;
+  	border: 1.5px;
+  	box-shadow: 1px 1px 2px #bbbbbb;
+  	cursor: pointer;
+}
+
+#s1 #s2 #s3 th, td{
+	border: 1px solid grey;
+  	padding: 5px;
+  	text-align: left;
+}
+
+#s1 #s2 #s3 th {
+  height: 10px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#s1 #s2 #s3 table tr:hover {
+	background-color: #F08080;
+}
+
+#t1 tr:nth-child(even){
+	background-color: #ADD8E6;
+}
+
+#t2 tr:nth-child(even){
+	background-color: #FFDEAD;
+}
+
+#t3 tr:nth-child(even){
+	background-color: #E6E6FA;
+}
