@@ -143,6 +143,10 @@ header .button_2:hover{
 	font-family: sans-serif, Arial, Helvetica;
 }
 
+.responsive {
+  
+}
+
 #showcase h1{
 	margin-top: 10px;
 	font-size: 25px;
@@ -327,4 +331,26 @@ caption{
 
 #t3 tr:nth-child(even){
 	background-color: #E6E6FA;
+}
+
+.container__image {
+  display: inline-block;
+  margin-top: 30px;
+  vertical-align: top;
+  width: 20%;
+  height: auto;
+  object-fit: contain; 
+  margin: 100px 30px 100px 100px;
+}
+.container__text {
+  display: inline-block;
+  margin-top: 50px;
+  width: 50%;
+  font-size: 17px;
+}
+
+@media (max-width: 620px) {
+  .container__text {
+    width: 100%;
+  }
 }
