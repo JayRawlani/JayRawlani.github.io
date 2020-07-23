@@ -1,33 +1,153 @@
 <!DOCTYPE html>
 <head lang="en">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title> Jai Provision </title>
-	<link rel="icon" type="image/png" href=".\images\grocery logo.png" />
 	<link rel="stylesheet" href=".\css\style.css">
+	<script>
+
+		function checkPword(str1)
+		{
+			var n1=0;
+			var n2=0;
+			var n3=0;
+			for(i=0; i<str1.length; i++)
+			{
+				if(str1[i]>='a' && str1[i]<='z')
+					n1++;
+				else if (str1[i]>='A' && str1[i]<='Z')
+					n2++;
+				else if (str1[i]>='0' && str1[i]<='9')
+					n3++;
+			}
+			if(n1>0 && n2>0 &&n3>0)  
+				return true;
+			else
+				return false;
+		}
+	
+		function checkEmail(str1)
+		{
+			var posat=str1.indexOf("@");
+			var posdot=str1.indexOf(".");
+		
+	
+			if(posat!=-1 && posdot!=-1)
+			{
+			   if(posat>1 && posdot-posat>=2 && (str1.length-1-posdot>=2 && str1.length-1-posdot<=5)) 
+			   {
+				   return true;
+			   }
+			   else{
+				   return false;
+			   }
+				
+			}
+			else
+			{
+				return false;
+			}
+				
+		}
+		
+		function validateform()
+		{
+			var nam=document.myform.Name.value
+			var password=document.myform.Password.value; 
+			var cpassword=document.myform.CPassword.value;
+			var email=document.myform.Email.value;
+			var mobile=document.myform.Mobile.value;
+	
+			if(nam=="" || nam == null) 
+			{
+				document.getElementById("nam1").innerHTML="Name should not be blank";
+				return false;
+			}
+			else if(nam.length<3)
+			{
+				document.getElementById("nam1").innerHTML="Name length should be in between 3-30";
+				return false;
+			}
+			else if(nam.length>30)
+			{
+				document.getElementById("nam1").innerHTML="Name length should be in between 3-30";
+				return false;
+			}
+			else if(isNaN(nam)==false)
+			{
+				document.getElementById("nam1").innerHTML="Name cannot be numeric";
+				return false;
+			}
+			else if(password=="" || password==null)
+			{
+				document.getElementById("pword").innerHTML="Password should not be blank";
+				return false;
+			}
+			else if(password.length<6)
+			{
+				document.getElementById("pword").innerHTML="Password should be of minimum 6 characters";
+				return false;
+			}
+			else if(!checkPword(password))
+			{
+				document.getElementById("pword").innerHTML="Password should have atleast 1 capital letter, 1 small letter and 1 digit";
+				return false;
+			}
+			else if(password!=cpassword)
+			{
+				document.getElementById("cpword").innerHTML="Password doesn't match";
+				return false;
+			}
+			else if(email=="" || email==null)
+			{
+				document.getElementById("mail").innerHTML="Email can't be empty";
+				return false;
+			}
+			else if(!checkEmail(email)) 
+			{
+				document.getElementById("mail").innerHTML="Email not valid";
+				return false;
+			}
+			else if(mobile=="" || mobile==null)
+			{
+				document.getElementById("contact").innerHTML="Mobile Number can't be empty";
+				return false;
+			}
+			else if(mobile.length!=10)
+			{
+				document.getElementById("contact").innerHTML="Mobile Number not valid";
+				return false;
+			}
+			else if(mobile[0]<'6')
+			{
+				document.getElementById("contact").innerHTML="Mobile Number not valid";
+				return false;
+			}
+			else if(mobile[0]>'9')
+			{
+				document.getElementById("contact").innerHTML="Mobile Number not valid";
+				return false;
+			}
+		}
+	</script>
 </head>
 <BODY>
-		<!-- Head -->
-		<header>
-			<div class="container">
-				<div id="name">
-					<h1><span class="highlight">Jai</span> <span class="highligt">Provision</span></h1>
-				</div>
-				<nav>
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li class="current"><a href="Groceries list.html">Groceries list</a></li>
-						<li class="current"><a href="About.html">About</a></li>
-						<li class="current"><a href="reg.html">Registration</a></li>
-						<button type="button" class="button_2" onclick="document.getElementById('Demo').innerHTML = Date()">
-							Today's Date
-						</button>
-						<p id="Demo"></p>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<br>
+	<div class="header">
+		<div class="logo"><img src=".\images\grocery logo1.png" alt="Logo"></div>
+		<div class="title">
+			<h1><span class="highlight">Jai</span>
+			<span class="highligt">Provision</span></h1>
+		</div>
+	</div>
 
+	<div class="nav">
+		<a href="#home">Home</a>
+		<a href="#gl">Groceries lists</a>
+		<a href="#about">About</a>
+		<a href="#reg">Registration</a>
+	</div>
+
+	<div class="content" id="home">
 		<section id="showcase">
 			<div class="container">
 				<h1>READY TO SHOP GROCERIES?</h1>
@@ -40,48 +160,496 @@
 				</p>
 			</div>
 		</section>
+		<div class="side2">
+			<p>
+				It's always good to be up-to-date. So we have added today's date here on our site. 
+				<button type="button" onclick="document.getElementById('date_time_button').innerHTML = Date()">
+				Click and see Date and Time.</button>
+			</p>
+        </div>
+	</div>
 
-		<section id="connect">
-			<div class="container">
-				<article id="socialmedia">
-					<h3>Reach Us On</h3>
-					<img src=".\images\contact logo.jpg" width="15%">
-					<br>
-					<table id="t4">
-						<tr><th colspan="2">Email/ Social Media</th></tr>
-						<tr>
-							<td>
-								<button class="button_3" onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
-							</td>
-							<td>
-								<button class="button_3" onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<button class="button_3" onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
-							</td>
-							<td>
-								<button class="button_3" onclick="window.location.href = 'mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out';">Email me</button>
-							</td>
-						</tr>
-					</table>
-				</article>
-					
-			</div>
-
-			<aside id="sidebar">
-				<div class="s1">
-					<h3>Shop Adress</h3>
-					<img src=".\images\address logo.jpeg" width="15%">
-					<p>Jai Provision, Sai Nagar,
-					<br> Near bus stand, 
-					<br> Arvi - 442201</p>
-				</div>
-			</aside>
+	<section id="gl">
+		<section id="dis">
+		<details>
+			<summary id="s1">Click here for Eatable oils</summary>
+			<div style="overflow-x:auto;">
+			<table align="center" id="t1">
+				<caption>
+					Eatable oils
+				</caption>
+				<tr>
+					<th> Name </th>
+					<th> Quantity </th>
+					<th> Price </th>
+				</tr>
+				<tr>
+					<td rowspan="3">Soyabean Oil</td>
+					<td>0.5 lt</td>
+					<td>50 rs</td>
+				</tr>
+				<tr>
+					<td>1 lt</td>
+					<td>95 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>510 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Groundnut Oil</td>
+					<td>0.5 lt</td>
+					<td>80 rs</td>
+				</tr>
+				<tr>
+					<td>1 lt</td>
+					<td>150 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>780 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Ricebran Oil</td>
+					<td>1 lt</td>
+					<td>110 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>580 rs</td>
+				</tr>
+				<tr>
+					<td>15 lt</td>
+					<td>1620 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Sunflower Oil</td>
+					<td>1 lt</td>
+					<td>115 rs</td>
+				</tr>
+				<tr>
+					<td>5 lt</td>
+					<td>600 rs</td>
+				</tr>
+				<tr>
+					<td>15 lt</td>
+					<td>1680 rs</td>
+				</tr>
+			</table>
+		</div>
+		</details>
 		</section>
-		<br>
-		<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="8" width="100%"> Call us on 8975919061 </marquee>
+
+		<!--dals and others-->
+		<section id="dis">
+		<details>
+			<summary id="s2">Click here for Dals and others</summary>
+			<div style="overflow-x:auto;">
+			<table align="center" id="t2">
+				<caption>
+					Dals and others
+				</caption>
+				<tr>
+					<th> Name </th>
+					<th> Quantity </th>
+					<th> Price </th>
+				</tr>
+				<tr>
+					<td rowspan="3">Toor dal</td>
+					<td>1 kg</td>
+					<td>90 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>265 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>440 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Chana dal</td>
+					<td>1 kg</td>
+					<td>60 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>174 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>285 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Moong dal</td>
+					<td>o.5 kg</td>
+					<td>55 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>110 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>325 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Urad dal</td>
+					<td>0.5 kg</td>
+					<td>55 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>110 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>325 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Sugar</td>
+					<td>1 kg</td>
+					<td>38 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>190 rs</td>
+				</tr>
+				<tr>
+					<td>10 kg</td>
+					<td>376 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Grondnut</td>
+					<td>1 kg</td>
+					<td>120 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>590 rs</td>
+				</tr>
+				<tr>
+					<td>10 kg</td>
+					<td>1180 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Rava</td>
+					<td>0.5 kg</td>
+					<td>20 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>40 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>190 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Maida</td>
+					<td>0.5 kg</td>
+					<td>20 rs</td>
+				</tr>
+				<tr>
+					<td>1 kg</td>
+					<td>40 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>190 rs</td>
+				</tr>
+			</table>
+		</div>
+		</details>
+		</section>
+
+		<!--rice-->
+		<section id="dis">
+		<details>
+			<summary id="s3">Click here for Rice</summary>
+			<div style="overflow-x:auto;">
+			<table align="center" id="t3">
+				<caption>
+					Rice
+				</caption>
+				<tr>
+					<th> Name </th>
+					<th> Quantity </th>
+					<th> Price </th>
+				</tr>
+				<tr>
+					<td rowspan="3">Basmati</td>
+					<td>1 kg</td>
+					<td>90 rs</td>
+				</tr>
+				<tr>
+					<td>3 kg</td>
+					<td>265 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>440 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Kaali mooch</td>
+					<td>1 kg</td>
+					<td>48 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>240 rs</td>
+				</tr>
+				<tr>
+					<td>30 kg</td>
+					<td>1425 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Kolam</td>
+					<td>1 kg</td>
+					<td>45 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>225 rs</td>
+				</tr>
+				<tr>
+					<td>30 kg</td>
+					<td>1350 rs</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">HMT</td>
+					<td>1 kg</td>
+					<td>40 rs</td>
+				</tr>
+				<tr>
+					<td>5 kg</td>
+					<td>200 rs</td>
+				</tr>
+				<tr>
+					<td>30 kg</td>
+					<td>1200 rs</td>
+				</tr>
+			</table>
+			</div>
+		</details>
+		</section>
+	</section>
+
+	<div class="content" id="about">
+        <div class="side1">
+		<summary id="s1">Click here to know about timings of shop</summary>
+			<table align="center" id="t1">
+				<tr>
+					<th>Day</th>
+					<th>Time</th>
+				</tr>
+				<tr>
+					<td>Monday</td>
+					<td>Close</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Tuesday</td>
+					<td>9am - 10pm</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Wednesday</td>
+					<td>9am - 10pm</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Thursday</td>
+					<td>9am - 10pm</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Friday</td>
+					<td>9am - 10pm</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Saturday</td>
+					<td>9am - 10pm</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Sunday</td>
+					<td>11am - 10pm</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="maincontent">
+			<h2>About Jai Provision</h2>
+			<p>It was formed on 10th Jan 1994. It's a gorcery shop where you can buy best quality daily usage products. We tend to provide excellent services to each and every customers. we provide all sorts of utilities and also keep varieties of each item. </p>
+			<p><strong><i>A perfect solution to all your grocery probelms at a very reasonable price.</i></strong></p>
+			<p>Credit Cards/ Debit Cards/ Online payments/ Sodexo are accepted here.</p>
+			<p>At the right side, theres a image of <strong><i>Jai Provision's Owner</i></strong></p>
+	</div>
+	<div class="side2">
+		<div>
+			<img class="container__image" src=".\images\owner1.jpg">
+		</div>
+	</div>
+
+	<section id="reg" class="form">
+			
+		<form name="myform" method="POST" action="1. first examle.html" onsubmit="return validateform()">
+				Name : <input type="text" name="Name"><br/>
+				<span id="nam1"></span><br/>
+		
+				Password : <input type="password" name="Password"><br/>
+				<span id="pword"></span><br/>
+		
+				Confirm Password : <input type="text" name="CPassword"><br/>
+				<span id="cpword"></span><br/>
+		
+				Email : <input type="text" name="Email"><br/> 
+				<span id="mail"></span><br/>
+		
+				Mobile Number : <input type="text" name="Mobile"><br/>
+				<span id="contact"></span><br/>
+				<input type="submit"  value="Register">
+		</form>
+	</section>
+
+	<div class="split left">
+		<div class="centered">
+		  <img src=".\images\contact logo.jpg" alt="Contact">
+		  <h2>Reach Us on</h2>
+		  <table id="t4">
+			<tr>
+				<td>
+					<button class="button_3" onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="button_3" onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
+					</td>
+				<td>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<button class="button_3" onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<button class="button_3" onclick="window.location.href = 'mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out';">Email me</button>
+				</td>
+				<td>
+				</td>
+			</tr>
+		</table>
+		</div>
+	  </div>
+	  
+	  <div class="split right">
+		<div class="centered">
+		  <img src=".\images\address logo.jpeg" alt="Adress logo">
+		  <h2>Shop's Address</h2>
+		  <p>Jai Provision, Sai Nagar,
+			<br> Near bus stand, 
+			<br> Arvi - 442201.
+		</p>
+		</div>
+	  </div>
+	<br>
+
+
+	<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="8" width="100%"> Call us on 8975919061 </marquee>
 	<footer>
 			<small>&copy; Copyright Jai Provision official since 1990s</small>
 	</footer>
