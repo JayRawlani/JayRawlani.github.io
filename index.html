@@ -52,12 +52,9 @@
 		
 		function validateform()
 		{
-			var nam=document.myform.Name.value
-			var password=document.myform.Password.value; 
-			var cpassword=document.myform.CPassword.value;
-			var email=document.myform.Email.value;
-			var mobile=document.myform.Mobile.value;
-	
+			var nam=document.myform.Name.value;
+			var password=document.myform.Password.value;			var email=document.myform.Email.value;
+			var mobile=document.myform.Mobile.value;	
 			if(nam=="" || nam == null) 
 			{
 				document.getElementById("nam1").innerHTML="Name should not be blank";
@@ -93,11 +90,6 @@
 				document.getElementById("pword").innerHTML="Password should have atleast 1 capital letter, 1 small letter and 1 digit";
 				return false;
 			}
-			else if(password!=cpassword)
-			{
-				document.getElementById("cpword").innerHTML="Password doesn't match";
-				return false;
-			}
 			else if(email=="" || email==null)
 			{
 				document.getElementById("mail").innerHTML="Email can't be empty";
@@ -128,7 +120,87 @@
 				document.getElementById("contact").innerHTML="Mobile Number not valid";
 				return false;
 			}
+			else if  (!(document.getElementById('male').checked) && !(document.getElementById('female').checked) && !(document.getElementById('other').checked))
+			{
+    			document.getElementById("mfo").innerHTML="Please select your Gender";
+				return false;
+			}
+			else if  (!(document.getElementById("confirm").checked))
+			{
+    			document.getElementById("cb").innerHTML="Cannot proceed without checking in the box, Please click on above box";
+    			return false;
+			}
 		}
+
+		function reg() {
+  			var x = document.getElementById("reg");
+			var y = document.getElementById("regtable");
+
+    		x.style.display = "block";
+			y.style.display = "none";
+		}
+
+		function registeredname() {
+  			var a = document.getElementById("regtable");
+  			var b = document.getElementById("reg");
+  
+   			a.style.display = "block";
+   			b.style.display = "none";
+		}
+ 
+  		table = document.getElementById("distable");
+
+		function addRow() {
+
+			var table = document.getElementById("distable");
+			if (validation()) {
+  			alert("Form Submitted Successfully. ThankYou for registration.")
+
+			  for(var i = 1; i < distable.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                         //rIndex = this.rowIndex;
+                         document.getElementById("fname").value = this.cells[0].innerHTML;
+                         document.getElementById("lname").value = this.cells[1].innerHTML;
+                         document.getElementById("age").value = this.cells[2].innerHTML;
+                    };
+                }
+			  
+  			var newRow = distable.insertRow(distable.length);
+			r1 = newRow.insertCell(0),
+			r2 = newRow.insertCell(1),
+			r3 = newRow.insertCell(2),
+			r4 = newRow.insertCell(3),
+			r5 = newRow.insertCell(4),
+			r6 = newRow.insertCell(5),
+			r7 = newRow.insertCell(6),
+			r8 = newRow.insertCell(7);
+
+  			nam = document.getElementsByName("Name").value,
+  			pass = document.getElementsByName("Password").value,
+  			eml = document.getElementsByName("Email").value,
+			cno = document.getElementsByName("Mobile").value,
+  			gen = document.getElementsByName("gender").value,
+  			tp = document.getElementsByName("Years").value;
+
+  			if ((document.getElementById('male').checked) || (document.getElementById('female').checked) || (document.getElementById('other').checked))
+			{
+  			gen = document.getElementsByName('gender').value;
+  			}
+
+  			r1.innerHTML = nam;
+  			r2.innerHTML = pass;
+  			r3.innerHTML = eml;
+  			r4.innerHTML = cno;
+  			r5.innerHTML = gen;
+  			r6.innerHTML = tp;
+  
+  			document.getElementById("reg").reset();
+  			selectedRowToInput();
+  			document.getElementById("reg").reset();
+		}
+};
 	</script>
 </head>
 <BODY>
@@ -143,7 +215,8 @@
 		<a href="#home">Home</a>
 		<a href="#gl">Groceries lists</a>
 		<a href="#about">About</a>
-		<a href="#reg">Registration</a>
+		<a href="#reg" onclick="reg()">Registration</a>
+		<a href="" onclick="registeredname()">Show registrations</a>
 	</div>
 
 	<span id="home">
@@ -179,7 +252,7 @@
 	</span>
 
 	<section class="grocerylist">
-		<section id="dis">
+		<section class="dis">
 		<details>
 			<summary id="details">Click here for Eatable oils</summary>
 			<table align="center" id="t1">
@@ -263,7 +336,7 @@
 		</section>
 
 		<!--dals and others-->
-		<section id="dis">
+		<section class="dis">
 		<details>
 			<summary id="details">Click here for Dals and others</summary>
 			<div style="overflow-x:auto;">
@@ -421,7 +494,7 @@
 		</section>
 
 		<!--rice-->
-		<section id="dis">
+		<section class="dis">
 		<details>
 			<summary id="details">Click here for Rice</summary>
 			<div style="overflow-x:auto;">
@@ -591,33 +664,69 @@
 					</table>
 				</details>
 			</div>
-		</div>
 	</section>
 
-	<span id="reg">
+	<span id="reg1">
 		<p><i>Registration form</i></p>
 	</span>
+	<p>As described above in home section, if you want to participate in Lucky Draw competition, please fillup below form.</p>
 
 	<section class="form">
 			
-		<form name="myform" method="POST" action="1. first examle.html" onsubmit="return validateform()">
-				Name : <input type="text" name="Name" placeholder="Ex. Jay Rawlani"><br/>
+		<form id="reg" name="myform" method="POST" action="1. first examle.html" onsubmit="return validateform()">
+				<b>Name :</b> <input type="text" name="Name" placeholder="Ex. Jay Rawlani"><br/>
 				<span id="nam1"></span><br/>
 		
-				Password : <input type="password" name="Password" placeholder="********"><br/>
+				<b>Password :</b> <input type="password" name="Password" placeholder="********"><br/>
 				<span id="pword"></span><br/>
 		
-				Confirm Password : <input type="text" name="CPassword" placeholder="********"><br/>
-				<span id="cpword"></span><br/>
-		
-				Email : <input type="text" name="Email" placeholder="Ex. abc@gmail.com"><br/> 
+				<b>Email : </b><input type="text" name="Email" placeholder="Ex. abc@gmail.com"><br/> 
 				<span id="mail"></span><br/>
 		
-				Mobile Number : <input type="text" name="Mobile" placeholder="8275183666"><br/>
+				<b>Mobile Number : </b><input type="text" name="Mobile" placeholder="8275183666"><br/>
 				<span id="contact"></span><br/>
-				<input type="submit"  value="Register" id="sub">
+
+				<b>Gender :</b>
+        		<input type="radio" id="male" name="gender" value="male">Male 
+  	    		<input type="radio" id="female" name="gender" value="female">Female
+				<input type="radio" id="other" name="gender" value="other">Other
+				<br>
+				<span id="mfo"></span>
+				<br>
+				  
+				<b>Since how long have you been enjoying our services :</b>
+				<select name="Years">
+					<option value="l1" > Less than a year</option>
+					<option value="1-5" > Between 1 to 5 years</option>
+					<option value="m5" > More than 5 years</option>
+				</select>
+				<br>
+				<span></span>
+				<br>
+
+				<input type="checkbox" name="confirmation" id="confirm"> by clicking on this checkbox, I hereby confirm that all the deatils uploaded here are true.
+				<br>
+				<span id="cb"></span>
+				<br>
+
+			  <input type="submit"  value="Register" id="sub" onclick="addRow()">
+			  <br>
 		</form>
 	</section>
+
+	<div class="summary" id="regtable" style="display: none;">
+    <h1>Registered people : </h1>
+     
+    <table id="distable" class="distable">
+      <tr>
+        <th>Name</th>
+		<th>Password</th>
+        <th>Email id</th>
+		<th>Contact No.</th>
+        <th>Gender</th>
+        <th>Years with us</th>     
+    </table>
+	</div>
 
 	<section class="social">
 		<div class="sleft">
@@ -669,9 +778,7 @@
 			</div>
 		  </div>
 	</section>
-	
 	<br>
-
 
 	<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="8" width="100%"> For further details call us on 8975919061 </marquee>
 	<footer>
