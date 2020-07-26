@@ -55,6 +55,7 @@
 			var nam=document.myform.Name.value;
 			var password=document.myform.Password.value;			var email=document.myform.Email.value;
 			var mobile=document.myform.Mobile.value;	
+			var sg = document.myform.sug.value;
 			if(nam=="" || nam == null) 
 			{
 				document.getElementById("nam1").innerHTML="Name should not be blank";
@@ -130,7 +131,11 @@
     			document.getElementById("cb").innerHTML="Cannot proceed without checking in the box, Please click on above box";
     			return false;
 			}
-		}
+			else if (sg === "") 
+			{
+    			document.getElementById("suggestions").innerHTML="This text area cannot be blank, if you don't wish to ans you can simply to NA";
+    			return false;
+			}
 
 		function reg() {
   			var x = document.getElementById("reg");
@@ -183,10 +188,20 @@
 			cno = document.getElementsByName("Mobile").value,
   			gen = document.getElementsByName("gender").value,
   			tp = document.getElementsByName("Years").value;
+			sug = document.getElementById("suggestions").value;
 
-  			if ((document.getElementById('male').checked) || (document.getElementById('female').checked) || (document.getElementById('other').checked))
+
+			if (document.getElementById('male').checked) 
 			{
-  			gen = document.getElementsByName('gender').value;
+    			gen = document.getElementById('male').value;
+    		}
+			else if (document.getElementById('female').checked) 
+			{
+    			gen = document.getElementById('female').value;
+  			} 
+			else if (document.getElementById('other').checked) 
+			{
+    			gen = document.getElementById('other').value;
   			}
 
   			r1.innerHTML = nam;
@@ -195,6 +210,7 @@
   			r4.innerHTML = cno;
   			r5.innerHTML = gen;
   			r6.innerHTML = tp;
+			r7.innerHTML = sug;
   
   			document.getElementById("reg").reset();
   			selectedRowToInput();
@@ -708,6 +724,9 @@
 				<br>
 				<span id="cb"></span>
 				<br>
+
+				<b>Suggestions for improving serives</b>
+				<textarea name="sug" id="Suggestions" class="field-long field-textarea" style="color: black"></textarea><br><br>
 
 			  <input type="submit"  value="Register" id="sub" onclick="addRow()">
 			  <br>
