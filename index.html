@@ -135,8 +135,7 @@
 	<div class="header">
 		<div class="logo"><img src=".\images\grocery logo1.png" alt="Logo"></div>
 		<div class="title">
-			<h1><span class="highlight">Jai</span>
-			<span class="highligt">Provision</span></h1>
+			<h1>Jai Provision</h1>
 		</div>
 	</div>
 
@@ -147,33 +146,42 @@
 		<a href="#reg">Registration</a>
 	</div>
 
-	<div class="content" id="home">
-		<section id="showcase">
-			<div class="container">
-				<h1>READY TO SHOP GROCERIES?</h1>
-				<p>
+	<span id="home">
+		<p><i>Home</i></p>
+	</span>
+
+	<div class="content">
+		<div class="home_content">
+			<h2>READY TO SHOP GROCERIES?</h2>
+			<p>
 					We provide good quality products with different varieties at reasonable price.
 					<br>
 					We urge to provide excellent services to each coustmer.
 					<br>
 					In short our shop is a perfect solution/place to all your daily needs.
-				</p>
-			</div>
-		</section>
-		<div class="side2">
+			</p>
+			<img src=".\images\front inside.jpeg" alt="Shop's Pic">
+		</div>
+		<div class="home_right">
 			<p>
-				It's always good to be up-to-date. So we have added today's date here on our site. 
-				<button type="button" onclick="document.getElementById('date_time_button').innerHTML = Date()">
-				Click and see Date and Time.</button>
+				<h3>Surprise! Surprise! Surprise!</h3> 
+				<p>
+					Hello everyone, We are going to conduct a lucky draw on our 25th anniversary this year. That is on 10th of Jan, 2020. Every customer who buys groceries online for more than Rs 5000/- will be given a <b><i>Surprise Gift</i></b> from us and at the end of the day, the winner of Lucky draw will be cashback of Rs 5000/- from our side.
+					<br>
+					<p>So what are yiu waiting for? Participate in our lucky draw and get a chance to win this mega <b><i>Cash Prize</i></b></p>
+				</p>
 			</p>
         </div>
 	</div>
 
-	<section id="gl">
+	<span id="gl">
+		<p><i>Groceries list</i></p>
+	</span>
+
+	<section class="grocerylist">
 		<section id="dis">
 		<details>
-			<summary id="s1">Click here for Eatable oils</summary>
-			<div style="overflow-x:auto;">
+			<summary id="details">Click here for Eatable oils</summary>
 			<table align="center" id="t1">
 				<caption>
 					Eatable oils
@@ -251,14 +259,13 @@
 					<td>1680 rs</td>
 				</tr>
 			</table>
-		</div>
 		</details>
 		</section>
 
 		<!--dals and others-->
 		<section id="dis">
 		<details>
-			<summary id="s2">Click here for Dals and others</summary>
+			<summary id="details">Click here for Dals and others</summary>
 			<div style="overflow-x:auto;">
 			<table align="center" id="t2">
 				<caption>
@@ -416,7 +423,7 @@
 		<!--rice-->
 		<section id="dis">
 		<details>
-			<summary id="s3">Click here for Rice</summary>
+			<summary id="details">Click here for Rice</summary>
 			<div style="overflow-x:auto;">
 			<table align="center" id="t3">
 				<caption>
@@ -500,156 +507,173 @@
 		</section>
 	</section>
 
-	<div class="content" id="about">
-        <div class="side1">
-		<summary id="s1">Click here to know about timings of shop</summary>
-			<table align="center" id="t1">
-				<tr>
-					<th>Day</th>
-					<th>Time</th>
-				</tr>
-				<tr>
-					<td>Monday</td>
-					<td>Close</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Tuesday</td>
-					<td>9am - 10pm</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Wednesday</td>
-					<td>9am - 10pm</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Thursday</td>
-					<td>9am - 10pm</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Friday</td>
-					<td>9am - 10pm</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Saturday</td>
-					<td>9am - 10pm</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Sunday</td>
-					<td>11am - 10pm</td>
-				</tr>
-			</table>
+	<span id="about">
+		<p><i>About</i></p>
+	</span>
+	<section class="about_section">
+		<div class="about_left">
+			<div>
+				<figure>
+					<img class="container__image" src=".\images\owner1.jpg">
+					<figcaption>Naresh Mohandas Rawlani
+						<br> Divya Naresh Rawlani
+						<br> (Owner of Jai Provision)
+					</figcaption>
+				</figure>
+			</div>
 		</div>
-	</div>
 
-	<div class="maincontent">
-			<h2>About Jai Provision</h2>
-			<p>It was formed on 10th Jan 1994. It's a gorcery shop where you can buy best quality daily usage products. We tend to provide excellent services to each and every customers. we provide all sorts of utilities and also keep varieties of each item. </p>
-			<p><strong><i>A perfect solution to all your grocery probelms at a very reasonable price.</i></strong></p>
-			<p>Credit Cards/ Debit Cards/ Online payments/ Sodexo are accepted here.</p>
-			<p>At the right side, theres a image of <strong><i>Jai Provision's Owner</i></strong></p>
-	</div>
-	<div class="side2">
-		<div>
-			<img class="container__image" src=".\images\owner1.jpg">
+			<div class="about_content">
+				<h2>About Jai Provision</h2>
+				<p><i>Jai Provision</i> was formed on 10th Jan 1995. It's a gorcery shop where you can buy best quality daily usage products. We tend to provide excellent services to each and every customers. we provide all sorts of utilities and also keep varieties of each item. </p>
+				<p><strong><i>A perfect solution to all your grocery probelms at a very reasonable price.</i></strong></p>
+				<p>Credit Cards/ Debit Cards/ Online payments/ Sodexo are accepted here.</p>
+				<details>
+					<summary id="ab_details">Click here to know about timings of shop</summary>
+					<div style="overflow-x:auto;"></div>
+					<table align="center" id="t4">
+					<tr>
+						<th>Day</th>
+						<th>Time</th>
+					</tr>
+					<tr>
+						<td>Monday</td>
+						<td>Close</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Tuesday</td>
+						<td>9am - 10pm</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Wednesday</td>
+						<td>9am - 10pm</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Thursday</td>
+						<td>9am - 10pm</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Friday</td>
+						<td>9am - 10pm</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Saturday</td>
+						<td>9am - 10pm</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Sunday</td>
+						<td>11am - 10pm</td>
+					</tr>
+					</table>
+				</details>
+			</div>
 		</div>
-	</div>
+	</section>
 
-	<section id="reg" class="form">
+	<span id="reg">
+		<p><i>Registration form</i></p>
+	</span>
+
+	<section class="form">
 			
 		<form name="myform" method="POST" action="1. first examle.html" onsubmit="return validateform()">
-				Name : <input type="text" name="Name"><br/>
+				Name : <input type="text" name="Name" placeholder="Ex. Jay Rawlani"><br/>
 				<span id="nam1"></span><br/>
 		
-				Password : <input type="password" name="Password"><br/>
+				Password : <input type="password" name="Password" placeholder="********"><br/>
 				<span id="pword"></span><br/>
 		
-				Confirm Password : <input type="text" name="CPassword"><br/>
+				Confirm Password : <input type="text" name="CPassword" placeholder="********"><br/>
 				<span id="cpword"></span><br/>
 		
-				Email : <input type="text" name="Email"><br/> 
+				Email : <input type="text" name="Email" placeholder="Ex. abc@gmail.com"><br/> 
 				<span id="mail"></span><br/>
 		
-				Mobile Number : <input type="text" name="Mobile"><br/>
+				Mobile Number : <input type="text" name="Mobile" placeholder="8275183666"><br/>
 				<span id="contact"></span><br/>
-				<input type="submit"  value="Register">
+				<input type="submit"  value="Register" id="sub">
 		</form>
 	</section>
 
-	<div class="split left">
-		<div class="centered">
-		  <img src=".\images\contact logo.jpg" alt="Contact">
-		  <h2>Reach Us on</h2>
-		  <table id="t4">
-			<tr>
-				<td>
-					<button class="button_3" onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
-				</td>
-				<td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<button class="button_3" onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
+	<section class="social">
+		<div class="sleft">
+			<div class="centered">
+			  <img src=".\images\contact logo.jpg" alt="Contact">
+			  <h2>Reach Us on</h2>
+			  <table id="t5">
+				<tr>
+					<td>
+						<button class="button_3" onclick="window.location.href = 'https://www.instagram.com/i_jay_rawlani/feed/';">Instagram</button>
 					</td>
-				<td>
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<button class="button_3" onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
-				</td>
-				<td>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				<button class="button_3" onclick="window.location.href = 'mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out';">Email me</button>
-				</td>
-				<td>
-				</td>
-			</tr>
-		</table>
-		</div>
-	  </div>
-	  
-	  <div class="split right">
-		<div class="centered">
-		  <img src=".\images\address logo.jpeg" alt="Adress logo">
-		  <h2>Shop's Address</h2>
-		  <p>Jai Provision, Sai Nagar,
-			<br> Near bus stand, 
-			<br> Arvi - 442201.
-		</p>
-		</div>
-	  </div>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="button_3" onclick="window.location.href = 'https://m.facebook.com/jacky.rawlani';">Facebook</button>
+						</td>
+					<td>
+					</td>
+				</tr>
+	
+				<tr>
+					<td>
+						<button class="button_3" onclick="window.location.href = 'https://www.linkedin.com/in/jay-rawlani-7b9317180';">LinkedIn</button>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<button class="button_3" onclick="window.location.href = 'mailto:jnrawlani@mitaoe.ac.in?subject=Reaching%20Out';">Email me</button>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+			</div>
+		  </div>
+		  
+		  <div class="sright">
+			<div class="centered">
+			  <img src=".\images\address logo.jpeg" alt="Adress logo">
+			  <h2>Shop's Address</h2>
+			  <p>Jai Provision, Sai Nagar,
+				<br> Near bus stand, 
+				<br> Arvi - 442201.
+			</p>
+			</div>
+		  </div>
+	</section>
+	
 	<br>
 
 
-	<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="8" width="100%"> Call us on 8975919061 </marquee>
+	<marquee bgcolor="#cccccc" loop=-1 direction="right" scrollamount="8" width="100%"> For further details call us on 8975919061 </marquee>
 	<footer>
 			<small>&copy; Copyright Jai Provision official since 1990s</small>
 	</footer>
