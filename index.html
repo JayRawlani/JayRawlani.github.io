@@ -500,10 +500,10 @@
 				<br>
 				  
 				<b>Since how long have you been enjoying our services :</b>
-				<select name="Years">
-					<option value="l1" > Less than a year</option>
-					<option value="1-5" > Between 1 to 5 years</option>
-					<option value="m5" > More than 5 years</option>
+				<select id="Years">
+					<option > Less than a year</option>
+					<option > Between 1 to 5 years</option>
+					<option > More than 5 years</option>
 				</select>
 				<br>
 				<span></span>
@@ -532,7 +532,6 @@
 		<th>Password</th>
         <th>Email id</th>
 		<th>Contact No.</th>
-        <th>Gender</th>
 		<th>Years with us</th> 
 		<th>Suggestions</th>  
       </tr>  
@@ -738,25 +737,23 @@
 	var cell4 = row.insertCell(3);
 	var cell5 = row.insertCell(4);
 	var cell6 = row.insertCell(5);
-	var cell7 = row.insertCell(6);
 
 	  cell1.innerHTML = document.getElementById("Name").value;
 	  cell2.innerHTML = document.getElementById("Pass").value;
 	  cell3.innerHTML = document.getElementById("email").value;
 	cell4.innerHTML = document.getElementById("mob").value;
-	cell5.innerHTML = document.getElementById("g").value;
-	cell6.innerHTML = document.getElementById("Years").value;
-	cell7.innerHTML = document.getElementById("Suggestions").value;
+	cell5.innerHTML = document.getElementById("Years").value;
+	cell6.innerHTML = document.getElementById("Suggestions").value;
 
 	document.getElementById("Name").value = "";
 	  document.getElementById("Pass").value = "";
 	  document.getElementById("email").value = "";
 	  document.getElementById("mob").value = "";
-	  document.getElementById("g").value = "";
 	document.getElementById("Years").value ="";
 	document.getElementById("Suggestions").value = "";
 
 	  document.getElementById("confirm").checked = false;
+	  document.getElementById("g").checked = false;
 	}
 	</script>
 </html>
